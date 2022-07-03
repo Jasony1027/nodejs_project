@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Change Password</title>
+    <script src="scripts/login.js" defer></script>
+    <script src="profile.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+
+</head>
+
+<body class="background">
+    {{>nav_bar}}
+    <div class="wrapper">
+        <br>
+        <br>
+
+        <div class="container">
+            <div class="row change-pass-container" style="background-color:whitesmoke;">
+                <div class="col-lg-4 col-xs-12">
+                    <img src="images/Logo.PNG" width="250px" height="250px">
+                </div>
+
+
+                <div class="col-lg-8 col-xs-12" style="float: left;">
+                    <form action="/change-password" method="post">
+                    {{#if message}}
+                            <p class="alert alert-info">{{message}}</p>
+                      {{/if}}
+
+                        <label>Current Password</label>
+                        <br>
+                        <input id="curr_pass" name="curr_pass" type="password" size="20" value="{{curr_pwd}}" required>
+                        <br><br>
+                        <label>New Password</label>
+                        <br>
+                        <input id="new_pass" name="new_pass" type="password" size="20" value="{{new_pwd}}"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            required>
+                        <br><br>
+                        <label>Confirm Password</label>
+                        <br>
+                        <input id="confirm_pass" name="confirm_pass" type="password" size="20" value="{{confirm_pass}}"
+                            required>
+                        <br><br>
+                        <button type="submit" class="btn-danger btn-primary" style="border-radius: 15px; padding: 8px;">
+                            Change Password
+                        </button>
+                    </form>
+                    <!--<div class="col" id="profiledelete" style="display: inline">-->
+                    <!--<button type="submit" class="btn-danger btn-primary"  style="border-radius: 15px; padding: 8px;">-->
+                    <!--Change Password-->
+                    <!--</button>-->
+                    <!--<br>-->
+                    <!--<br>-->
+                    <!--<br>-->
+                    <!--</div>-->
+                    <br>
+                    <br>
+                    <br>
+                    <div id="msg">
+                        <h5>Password must contain the following:</h5>
+                        <br>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-end" style="background-color:whitesmoke;">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+        var myInput = document.getElementById("new_pass");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+
+        myInput.onfocus = function () {
+            document.getElementById("msg").style.display = "block";
+        };
+
+        myInput.onblur = function () {
+            document.getElementById("msg").style.display = "none";
+        };
+
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function () {
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if (myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+
+            // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if (myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }
+
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+
+            // Validate length
+            if (myInput.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        }
+    </script>
+
+
+    {{>footer}}
+</body>
+
+</html>

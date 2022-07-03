@@ -1,0 +1,9 @@
+{"_id":{"$oid":"5ca935249a12fc0b288a1042"},"type":"converse","name":"classic low top","color":"black","price":"50.00","path":"images/Converse_lowtop_black.PNG"}
+{"_id":{"$oid":"5ca935519a12fc0b288a1043"},"type":"Jordan","name":"Retro Steel","color":"Red","price":"130.00","path":"images/jordan_retro_steel_black.PNG"}
+{"_id":{"$oid":"5caa7cbb9b249c0b289e3a65"},"type":"Jordan","name":"Retro Steel","color":"Black","price":"130.00","path":"images/jordan_retro_steel_red.PNG"}
+{"_id":{"$oid":"5caa7cc89b249c0b289e3a66"},"type":"converse","name":"classic low top","color":"red","price":"50.00","path":"images/converse_low_top_red.PNG"}
+{"_id":{"$oid":"5caa84589b249c0b289e3a67"},"type":"converse","name":"classic low top","color":"blue","price":"50.00","path":"images/converse_low_top_blue.PNG"}
+{"_id":{"$oid":"5caa84619b249c0b289e3a68"},"type":"converse","name":"classic high top","color":"black","price":"50.00","path":"images/Converse_hightop_black.PNG"}
+{"_id":{"$oid":"5caa846a9b249c0b289e3a69"},"type":"converse","name":"classic high top","color":"red","price":"50.00","path":"images/converse_high_top_red.PNG"}
+{"_id":{"$oid":"5caa84ca9b249c0b289e3a6a"},"type":"converse","name":"classic high top","color":"white","price":"50.00","path":"images/converse_hightop_white.PNG"}
+{"_id":{"$oid":"5caa9e949a12fc0b288a1048"},"type":"converse","name":"classic low top","color":"white","price":"50.00","path":"images/converse_low_top_white.PNG"}

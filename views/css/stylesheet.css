@@ -1,0 +1,909 @@
+@media screen and (min-width: 625px) {
+    body {
+        /*background-image: url("https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fsoftwhitebg.png?alt=media&token=7a1cbdb6-5e9f-41fd-a2e0-5745604b420a");*/
+        background-size: 1920px 1080px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        /*font-variant: all-small-caps;*/
+    }
+    .home-jumbo {
+        background-color: white;
+        margin-top: 20px;
+        width: 100%;
+        padding-top: 130px;
+        height: 400px;
+        text-align: center;
+    }
+    .change-pass-container {
+        padding-top: 25px;
+    }
+    .alert {
+        position: relative;
+        padding: .75rem 1.25rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        margin: 20px;
+    }
+    .jumbotron {
+        width: 100%;
+    }
+    .modal-footer {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding: 1rem;
+        border-top: 1px solid #dee2e6;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .carousel-item {
+        width: 100%;
+        height: auto;
+    }
+    .d-block {
+        width: 1600px;
+        height: auto;
+    }
+    .wrapper {
+        height: 100%;
+        margin-bottom: 75px;
+    }
+    .top {
+        overflow: hidden;
+        color: #555555;
+        width: 100%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: fixed;
+        z-index: 2;
+        max-height: 220px;
+    }
+    .container {
+        padding-top: 120px;
+        margin-bottom: -110px;
+    }
+    .filler {
+        width: 100%;
+        height: 80px;
+    }
+    #bannerholder {
+        width: 100%;
+        min-height: 120px;
+        text-align: center;
+    }
+    #banner {
+        top: 10px;
+        right: 90px;
+        /*z-index: 0;*/
+        overflow: hidden;
+        min-height: 120px;
+        margin: auto;
+        text-align: center;
+    }
+    #logoholder {
+        left: 60px;
+        float: left;
+        position: relative;
+        bottom: 130px;
+    }
+    .nav-link {
+        display: inline !important;
+        padding: .5rem .1rem !important;
+    }
+    .navlinks {
+        position: relative;
+        background-color: transparent;
+        float: right;
+        text-align: right;
+        width: 60%;
+        top: -35px;
+        padding-right: 2%;
+        font-size: 15pt;
+        font-variant: all-small-caps;
+    }
+    .navlinks-alt {
+        position: relative;
+        background-color: transparent;
+        float: right;
+        text-align: right;
+        width: 60%;
+        top: -95px;
+        padding-right: 2%;
+        font-size: 15pt;
+        font-variant: all-small-caps;
+        display: none;
+    }
+    table {
+        /*margin-left: 18px;*/
+        font-size: 11pt;
+        letter-spacing: 0.75px;
+        font-variant: all-small-caps;
+    }
+    a {
+        color: rgb(59, 112, 192);
+    }
+    a:hover {
+        color: #22cc22;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+    .dropdown-item:hover {
+        background-color: #fbfbfb;
+        color: #22cc22;
+        transition: all 0s;
+    }
+    #hrbars {
+        margin-left: 5%;
+    }
+    td {
+        left: 15px;
+        margin-top: -55px;
+    }
+    #createaccount {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+    #buttonholder {
+        display: inline;
+    }
+    #reviewbutton {
+        float: left;
+    }
+    #addtocartbutton {
+        float: right;
+        margin-left: 0%;
+    }
+    .btn {
+        border-radius: 13px;
+        font-variant: small-caps;
+    }
+    #or {
+        margin-top: 4px;
+    }
+    footer {
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        background-color: black;
+        opacity: 0.9;
+        font-variant: all-small-caps;
+        font-size: 9pt;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+    }
+    footer p {
+        color: palevioletred;
+        margin-top: 7px;
+    }
+    #sign_in {
+        width: 300px;
+        margin-top: 30px;
+        margin-left: 500px;
+        padding: 20px;
+        background-color: white;
+    }
+    #login {
+        width: 300px;
+        margin-top: 30px;
+        margin-left: 500px;
+        padding: 20px;
+        background-color: white;
+    }
+    #loginbutton {}
+    #msgs {
+        color: red;
+    }
+    /* -------------------------------------------- */
+    Edit in JSFiddle Result HTML CSS JavaScript Resources :root {
+        --input-padding-x: 1.5rem;
+        --input-padding-y: .75rem;
+    }
+    .card-signin {
+        border: 1px;
+        border-radius: 3rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    }
+    .card-signin .card-title {
+        margin-bottom: 2rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    .card-signin .card-body {
+        padding: 4rem;
+    }
+    .form-signin {
+        width: 100%;
+    }
+    .form-signin .btn {
+        font-size: 100%;
+        border-radius: 5rem;
+        letter-spacing: .1rem;
+        font-weight: bold;
+        padding: 1rem;
+        transition: all 0.2s;
+        margin-top: 5%;
+    }
+    .form-label-group {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .form-label-group input {
+        height: auto;
+        border-radius: 2rem;
+    }
+    .form-label-group>input,
+    .form-label-group>label {
+        padding: var(--input-padding-y) var(--input-padding-x);
+    }
+    .form-label-group>label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+        /* Override default <label> margin */
+        line-height: 1.5;
+        color: #495057;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        transition: all .1s ease-in-out;
+    }
+    .form-label-group input::-webkit-input-placeholder {
+        color: transparent;
+    }
+    .form-label-group input:-ms-input-placeholder {
+        color: transparent;
+    }
+    .form-label-group input::-ms-input-placeholder {
+        color: transparent;
+    }
+    .form-label-group input::-moz-placeholder {
+        color: transparent;
+    }
+    .form-label-group input::placeholder {
+        color: transparent;
+    }
+    .form-label-group input:not(:placeholder-shown) {
+        padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+        padding-bottom: calc(var(--input-padding-y) / 3);
+    }
+    .form-label-group input:not(:placeholder-shown)~label {
+        padding-top: calc(var(--input-padding-y) / 3);
+        padding-bottom: calc(var(--input-padding-y) / 3);
+        font-size: 7px;
+        color: transparent;
+    }
+    /* ---------------------------------------------------------- */
+    body {
+        /* padding-top:50px; */
+    }
+    fieldset {
+        border: thin solid #ccc;
+        border-radius: 4px;
+        padding: 20px;
+        padding-left: 40px;
+        background: #fbfbfb;
+    }
+    legend {
+        color: #678;
+    }
+    #form-control1 {
+        display: block;
+        width: 100%;
+        height: 30px;
+        /* padding: .375rem .75rem; */
+        /* font-size: 1rem; */
+        font-weight: 400;
+        /* line-height: 2.5; */
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    #form-control2 {
+        display: block;
+        width: 100%;
+        height: 160px;
+        /* padding: .375rem .75rem; */
+        /* font-size: 1rem; */
+        font-weight: 400;
+        /* line-height: 2.5; */
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    textarea {
+        resize: none;
+    }
+    label small {
+        color: #678 !important;
+    }
+    span.req {
+        color: maroon;
+        font-size: 112%;
+    }
+    /* -------------------------------------------------- */
+    .valid {
+        color: green;
+    }
+    .valid:before {
+        position: relative;
+        left: -35px;
+        content: "✔";
+    }
+    /* Add a red text color and an "x" when the requirements are wrong */
+    .invalid {
+        color: red;
+    }
+    .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "✖";
+    }
+    /* --------------------------------------------- */
+    #enlarge:hover {
+        /* height: 600px;
+        width: 400px;
+        background-color: red; */
+        transform: scale(1.15);
+        font-weight: bold;
+        transition: all 0.2s;
+        box-shadow: 2px 2px 116px #ffffff;
+    }
+    /* ----------------------------------------------
+        CSS for Profile
+       ---------------------------------------------- */
+    #profile_container {
+        width: 80%;
+        height: 60%;
+        background-color: darkred;
+    }
+    #profile_left {
+        width: 20%;
+        height: 600px;
+        float: left;
+        background-color: #ffffff;
+    }
+    #profile_buttons_left {
+        margin-left: 20%;
+    }
+    #profile_right {
+        width: 80%;
+        height: 600px;
+        float: left;
+        background-color: white;
+    }
+    #profile_right_move_text {
+        margin-left: 10%;
+    }
+    #profile_buttons_right {
+        margin-left: 80%;
+        margin-top: 15%;
+    }
+    #deletebutton {
+        position: relative;
+        top: 287px;
+        left: 57px;
+    }
+    .rating {
+        overflow: hidden;
+        vertical-align: bottom;
+        display: inline-block;
+        width: auto;
+        height: 30px;
+    }
+    .rating>input {
+        opacity: 0;
+        margin-right: -100%;
+    }
+    .rating>label {
+        position: relative;
+        display: block;
+        float: right;
+        background: url('https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fstar-off-big.png?alt=media&token=ce336472-f1af-4028-984b-47ebbaaac718');
+        background-size: 30px 30px;
+    }
+    .rating>label:before {
+        display: block;
+        opacity: 0;
+        content: '';
+        width: 30px;
+        height: 30px;
+        background: url("https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fstar-on-big.png?alt=media&token=8ffd280b-20f7-403c-9dbe-fece201195d1");
+        background-size: 30px 30px;
+        transition: opacity 0.2s linear;
+    }
+    .rating>label:hover:before,
+    .rating>label:hover~label:before,
+    .rating:not(:hover)> :checked~label:before {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1px) and (max-width: 624px) {
+    body {
+        /*background-image: url("https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fsoftwhitebg.png?alt=media&token=7a1cbdb6-5e9f-41fd-a2e0-5745604b420a");*/
+        background-size: 1920px 1080px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        /*font-variant: all-small-caps;*/
+    }
+    .home-jumbo {
+        background-color: white;
+        width: 100%;
+        height: 400px;
+        text-align: center;
+    }
+    .carousel-item {
+        margin-top: 100px;
+        width: 100%;
+    }
+    .wrapper {
+        height: 100%;
+        margin-bottom: 75px;
+    }
+    .top {
+        overflow: hidden;
+        color: #555555;
+        width: 100%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: fixed;
+        z-index: 2;
+        max-height: 220px;
+    }
+    .container {
+        padding-top: 120px;
+        margin-bottom: -110px;
+    }
+    .filler {
+        width: 100%;
+        height: 80px;
+    }
+    #bannerholder {
+        width: 100%;
+        min-height: 50px;
+        text-align: center;
+    }
+    #banner {
+        top: 10px;
+        right: 90px;
+        /*z-index: 0;*/
+        overflow: hidden;
+        min-height: 120px;
+        margin: auto;
+        text-align: center;
+    }
+    #logoholder {
+        left: 60px;
+        float: left;
+        position: relative;
+        bottom: 130px;
+    }
+    .btn-group {
+        display: inline !important;
+        padding: .5rem .1rem !important;
+    }
+    .nav-link {
+        display: inline !important;
+        padding: .5rem .1rem !important;
+    }
+    .navlinks {
+        position: relative;
+        background-color: transparent;
+        float: right;
+        text-align: right;
+        width: 60%;
+        top: -35px;
+        padding-right: 2%;
+        font-size: 15pt;
+        font-variant: all-small-caps;
+        display: none;
+    }
+    .navlinks-alt {
+        position: relative;
+        background-color: transparent;
+        float: right;
+        text-align: right;
+        width: 60%;
+        top: -95px;
+        padding-right: 2%;
+        font-size: 15pt;
+        font-variant: all-small-caps;
+    }
+    table {
+        /*margin-left: 18px;*/
+        font-size: 11pt;
+        letter-spacing: 0.75px;
+        font-variant: all-small-caps;
+    }
+    a {
+        color: rgb(221, 236, 12);
+    }
+    a:hover {
+        color: #22cc22;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+    .dropdown-item:hover {
+        background-color: #fbfbfb;
+        color: #22cc22;
+        transition: all 0s;
+    }
+    #hrbars {
+        margin-left: 5%;
+    }
+    td {
+        left: 15px;
+        margin-top: -55px;
+    }
+    #createaccount {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+    #buttonholder {
+        display: inline;
+    }
+    #reviewbutton {
+        float: left;
+    }
+    #addtocartbutton {
+        float: right;
+        margin-left: 0%;
+    }
+    .btn {
+        border-radius: 13px;
+        font-variant: small-caps;
+    }
+    #or {
+        margin-top: 4px;
+    }
+    input {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        background-color: black;
+        opacity: 0.9;
+        font-variant: all-small-caps;
+        font-size: 9pt;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+    }
+    footer p {
+        color: rgb(11, 88, 28);
+        margin-top: 7px;
+    }
+    #sign_in {
+        width: 300px;
+        margin-top: 30px;
+        margin-left: 500px;
+        padding: 20px;
+        background-color: white;
+    }
+    #login {
+        width: 300px;
+        margin-top: 30px;
+        margin-left: 500px;
+        padding: 20px;
+        background-color: white;
+    }
+    #loginbutton {}
+    #msgs {
+        color: red;
+    }
+    /* -------------------------------------------- */
+    Edit in JSFiddle Result HTML CSS JavaScript Resources :root {
+        --input-padding-x: 1.5rem;
+        --input-padding-y: .75rem;
+    }
+    .card-signin {
+        border: 1px;
+        border-radius: 3rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    }
+    .card-signin .card-title {
+        margin-bottom: 2rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    .card-signin .card-body {
+        padding: 4rem;
+    }
+    .form-signin {
+        width: 100%;
+    }
+    .form-signin .btn {
+        font-size: 100%;
+        border-radius: 5rem;
+        letter-spacing: .1rem;
+        font-weight: bold;
+        padding: 1rem;
+        transition: all 0.2s;
+        margin-top: 5%;
+    }
+    .form-label-group {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .form-label-group input {
+        height: auto;
+        border-radius: 2rem;
+    }
+    .form-label-group>input,
+    .form-label-group>label {
+        padding: var(--input-padding-y) var(--input-padding-x);
+    }
+    .form-label-group>label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+        /* Override default <label> margin */
+        line-height: 1.5;
+        color: #495057;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        transition: all .1s ease-in-out;
+    }
+    .form-label-group input::-webkit-input-placeholder {
+        color: transparent;
+    }
+    .form-label-group input:-ms-input-placeholder {
+        color: transparent;
+    }
+    .form-label-group input::-ms-input-placeholder {
+        color: transparent;
+    }
+    .form-label-group input::-moz-placeholder {
+        color: transparent;
+    }
+    .form-label-group input::placeholder {
+        color: transparent;
+    }
+    .form-label-group input:not(:placeholder-shown) {
+        padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+        padding-bottom: calc(var(--input-padding-y) / 3);
+    }
+    .form-label-group input:not(:placeholder-shown)~label {
+        padding-top: calc(var(--input-padding-y) / 3);
+        padding-bottom: calc(var(--input-padding-y) / 3);
+        font-size: 7px;
+        color: transparent;
+    }
+    /* ---------------------------------------------------------- */
+    body {
+        /* padding-top:50px; */
+    }
+    fieldset {
+        border: thin solid #ccc;
+        border-radius: 4px;
+        padding: 20px;
+        padding-left: 40px;
+        background: #fbfbfb;
+    }
+    legend {
+        color: #678;
+    }
+    #form-control1 {
+        display: block;
+        width: 100%;
+        height: 30px;
+        /* padding: .375rem .75rem; */
+        /* font-size: 1rem; */
+        font-weight: 400;
+        /* line-height: 2.5; */
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    #form-control2 {
+        display: block;
+        width: 100%;
+        height: 85px;
+        /* padding: .375rem .75rem; */
+        /* font-size: 1rem; */
+        font-weight: 400;
+        /* line-height: 2.5; */
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    label small {
+        color: #678 !important;
+    }
+    span.req {
+        color: maroon;
+        font-size: 112%;
+    }
+    /* -------------------------------------------------- */
+    .valid {
+        color: green;
+    }
+    .valid:before {
+        position: relative;
+        left: -35px;
+        content: "✔";
+    }
+    /* Add a red text color and an "x" when the requirements are wrong */
+    .invalid {
+        color: red;
+    }
+    .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "✖";
+    }
+    /* --------------------------------------------- */
+    #enlarge:hover {
+        /* height: 600px;
+        width: 400px;
+        background-color: red; */
+        transform: scale(1.15);
+        font-weight: bold;
+        transition: all 0.45s;
+    }
+    /* ----------------------------------------------
+        CSS for Profile
+       ---------------------------------------------- */
+    #profile_container {
+        width: 80%;
+        height: 60%;
+        background-color: darkred;
+    }
+    #profile_left {
+        width: 20%;
+        height: 600px;
+        float: left;
+        background-color: #ffffff;
+    }
+    #profile_buttons_left {
+        margin-left: 20%;
+    }
+    #profile_right {
+        width: 80%;
+        height: 600px;
+        float: left;
+        background-color: white;
+    }
+    #profile_right_move_text {
+        margin-left: 10%;
+    }
+    #profile_buttons_right {
+        margin-left: 80%;
+        margin-top: 15%;
+    }
+    #deletebutton {
+        position: relative;
+        top: 287px;
+        left: 57px;
+    }
+    .mt-5,
+    .my-5 {
+        margin-top: 3rem !important;
+        margin-left: 20%;
+    }
+    .rating {
+        overflow: hidden;
+        vertical-align: bottom;
+        display: inline-block;
+        width: auto;
+        height: 30px;
+    }
+    .rating>input {
+        opacity: 0;
+        margin-right: -100%;
+    }
+    .rating>label {
+        position: relative;
+        display: block;
+        float: right;
+        background: url('https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fstar-off-big.png?alt=media&token=ce336472-f1af-4028-984b-47ebbaaac718');
+        background-size: 30px 30px;
+    }
+    .rating>label:before {
+        display: block;
+        opacity: 0;
+        content: '';
+        width: 30px;
+        height: 30px;
+        background: url("https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fstar-on-big.png?alt=media&token=8ffd280b-20f7-403c-9dbe-fece201195d1");
+        background-size: 30px 30px;
+        transition: opacity 0.2s linear;
+    }
+    .rating>label:hover:before,
+    .rating>label:hover~label:before,
+    .rating:not(:hover)> :checked~label:before {
+        opacity: 1;
+    }
+}
+
+.rating {
+    overflow: hidden;
+    vertical-align: bottom;
+    display: inline-block;
+    width: auto;
+    height: 30px;
+}
+
+.rating>input {
+    opacity: 0;
+    margin-right: -100%;
+}
+
+.rating>label {
+    position: relative;
+    display: block;
+    float: right;
+    background: url('../images/star-off-big.png');
+    background-size: 30px 30px;
+}
+
+.rating>label:before {
+    display: block;
+    opacity: 0;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: url('../images/star-on-big.png');
+    background-size: 30px 30px;
+    transition: opacity 0.2s linear;
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before,
+.rating:not(:hover)> :checked~label:before {
+    opacity: 1;
+}
+
+.modal-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin: 20px;
+}

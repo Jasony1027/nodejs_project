@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+<<<<<<< HEAD
+  - "stable"
+=======
+  - "lts/*"
+>>>>>>> 6bf91caec8827a1adc5cce8032f28991da858eda

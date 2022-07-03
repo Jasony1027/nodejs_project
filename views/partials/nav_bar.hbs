@@ -1,0 +1,54 @@
+<div class="top">
+    <div id="bannerholder">
+        <img src="https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Ftopbanner2.png?alt=media&token=1ff55250-58d1-4956-a62b-c90a6ba86207" id="banner">
+        <div id="logoholder">
+            <a href="/">
+                <img src="https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fnewlogo.png?alt=media&token=a7d93299-444f-4232-884e-c2f365e65632" id="newlogo">
+            </a>
+
+        </div>
+    </div>
+
+
+    <div class="navlinks">
+        <a href="/shop">Shop</a> <b>|</b>
+        {{#if user}}
+            <a href="/my_cart">My Cart</a> <b>|</b>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">Profile options
+                {{username}}
+            </a>
+            <!--Drop down items-->
+            <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/profile">Edit Profile</a>
+                <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+            <!--Drop down items end-->
+        {{else}}
+            <a href="/login">Login</a> <b>|</b>
+            <a href="/insert">Create Account</a>
+        {{/if}}
+    </div>
+
+    <!--alternate code for when window shrinks-->
+    <div class="navlinks-alt">
+        <a href="/shop">Shop</a><br>
+        {{#if user}}
+            <a href="/my_cart">My Cart</a><br>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">Profile options
+                {{username}}
+            </a>
+            <!--Drop down items-->
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/profile">Edit Profile</a>
+                <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+            <!--Drop down items end-->
+        {{else}}
+            <a href="/login">Login</a><br>
+            <a href="/insert">Create Account</a>
+        {{/if}}
+
+    </div>
+</div>

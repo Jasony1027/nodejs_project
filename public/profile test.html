@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script src="scripts/login.js" defer></script>
+    <script src="profile.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!--important css-->
+    <link rel="stylesheet" href="../views/css/stylesheet.css">
+
+
+</head>
+
+    <div class="card">
+        <div class="card-header">
+            <h1>Profile</h1>
+        </div>
+        <div class="card-body">
+
+            <body class="background">
+            <!--{{>nav_bar}}-->
+            <div class="wrapper">
+                <br>
+                <br>
+                <br>
+
+                <div class="jumbotron container">
+
+                    <div class="card" style="width: 50%; float: left; ">
+                        <div class="card-body">
+                            <!--firebase image-->
+                        <img class="card-img-top" src="..." alt="Card image cap">
+
+                        </div>
+                        <div class="card-body">
+                            <div class="text-right">
+                                <button type="button" class="btn btn-danger">Change Image</button>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1</li>
+
+                        </ul>
+
+                    </div>
+
+                    <br>
+
+
+
+                    <!--<div class="jumbotron container">-->
+
+                        <div class="card" style="width: 50%; float: left">
+                            <div class="card-body">
+                                <form>
+                                    <div class="card-body">
+                                        <div>
+                                        <label><h6>F Name:</h6></label>
+                                        <br>
+                                        <input id="first_name" name="first_name" type="text" size="20" required>
+                                        <br>
+                                        <label><h6>L Name:</h6></label>
+                                        <br>
+                                        <input id="last_name" name="last_name" type="text" size="20" required>
+                                        <br>
+                                        <label><h6>Address:</h6></label>
+                                        <br>
+                                        <input id="address" name="address" type="text" size="20" required>
+                                        </div>
+
+                                        <div>
+                                        <label><h6>Phone Number 1:</h6></label>
+                                        <br>
+
+                                        <input type="text" class="input-medium bfh-phone" data-format="+1 (ddd) ddd-dddd">
+                                        <br>
+                                        <label><h6>Phone Number 2:</h6></label>
+                                        <br>
+                                        <input type="text" class="input-medium bfh-phone" data-format="+1 (ddd) ddd-dddd">
+                                        <br>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <hr>
+                        <div>
+                            <ul>
+                                <label><h6>Gender:</h6></label>
+                                <br>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Choose Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </ul>
+                        </div>
+                            <hr>
+                            <div>
+                                <div class="card-body" style="margin-left: 5%">
+                                        <label><h6>Birthday:</h6></label>
+                                        <br>
+                                        <select id="month" name="month" onchange="date_function()" required>
+                                            <option value="" disabled selected hidden>Month</option>
+                                            <option value="January">January</option>
+                                            <option value="February">February</option>
+                                            <option value="March">March</option>
+                                            <option value="April">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
+                                        </select>
+                                        <select id="day" name="day" required>
+                                            <option value="">Day</option>
+                                        </select>
+                                        <select id="year" name="year" onchange="date_function()" required>
+                                            <option value="" disabled selected hidden>Year</option>
+                                        </select>
+                        </div>
+                        <br>
+                    </div>
+                        <!--<input type="submit" value="Edit Profile">-->
+                        <!--<button type="reset" href="/">Cancel</button>-->
+                </div>
+
+
+                <br>
+
+                <div class="text-right">
+                    <button type="button" class="btn btn-danger">Remove an account</button>
+                </div>
+
+                <div class="text-right">
+                    <button type="button" class="btn btn-primary">Save and Change</button>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+</div>
+<!--{{>footer}}-->
+</body>
+
+</html>

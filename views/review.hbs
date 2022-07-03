@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+<script>
+    function starvalue(rating){
+        document.getElementById('stars').value = rating;
+    }
+</script>
+<body>
+{{>nav_bar}}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 col-md-9 col-lg-8 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <div class="col-3">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/group-12-acit-2911.appspot.com/o/images%2Fnewlogo.png?alt=media&token=a7d93299-444f-4232-884e-c2f365e65632"style="float: left" id="newlogo" alt="placeholder logo, replace with item image" height="100" width="100">
+                    </div>
+                    <div class="col-9" style="margin-left: 15%">
+
+                        <h1 class="card-title text-center" >Write a review</h1><br><br><br>
+                    </div>
+
+                    <hr>
+                    <div>
+                        <h5 style="float: left">
+                            Overall Rating
+                        </h5>
+
+                        <div style="float: right">
+                            <span class="rating">
+                                <input id="rating5" type="radio" onclick="starvalue(this.value)" name="rating" value="5">
+                                <label for="rating5">5</label>
+                                <input id="rating4" type="radio" onclick="starvalue(this.value)" name="rating" value="4">
+                                <label for="rating4">4</label>
+                                <input id="rating3" type="radio" onclick="starvalue(this.value)" name="rating" value="3" checked>
+                                <label for="rating3">3</label>
+                                <input id="rating2" type="radio" onclick="starvalue(this.value)" name="rating" value="2">
+                                <label for="rating2">2</label>
+                                <input id="rating1" type="radio" onclick="starvalue(this.value)" name="rating" value="1">
+                                <label for="rating1">1</label>
+                            </span>
+                        </div>
+                        <br><br>
+                    </div>
+
+
+                    <hr>
+                    <div>
+                        <h5>Write a review: </h5>
+                        <form class="form-signin" action="/add-review" method="post">
+
+                            <div class="form-group">
+                                <input value="{{id}}" id="_id" name="_id" type="hidden">
+                                <input type="text" name="title" id="title" placeholder="Review title" required="required" maxlength="78" size="78">
+                            </div><br>
+
+                            <hr>
+                            <div class="form-group">
+                                <h5>Review:</h5>
+                                <textarea name="body" id="body" placeholder="Review" required="required" rows="9" cols="80">
+
+                                </textarea>
+
+                            </div>
+
+                            <hr>
+                            <button class="btn btn-primary" data-dismiss="modal" type="submit">Submit review</button>
+                            <br>
+                            <input type="hidden" value="" id="stars" name="stars">
+                            {{message}}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{>footer}}
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
